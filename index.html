@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" type="image/png" href="https://www.manhuacu.mg.gov.br/css/images/favicon.png">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>test</title>
+</head>
+<!--
+	By Herick
+-->
+<style>
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
+
+*{
+	margin: 0;
+	}
+
+	body{
+		background: linear-gradient(to left, #f5f5ff 0%, #ffffff 100%);
+		font-family: 'Roboto Condensed';
+	}
+
+	.nav_tabs {
+    width: 100%;
+    text-align: center;
+   
+    background-color: #fff;
+}
+
+	.tab_label{
+		display: flex;
+		background-color: #1200b3;
+		padding: 10px;
+		font-size: 12px;
+		color:#fff;
+		cursor: pointer;
+		text-align: center;
+	}
+
+
+	.nav_tabs ul{
+		margin-left: 5%;
+		list-style: none;
+		text-align: center;
+	}
+
+	.nav_tabs ul li{
+		float: left;
+	}
+
+	.tab_label{
+		display: block;
+		background-color: #05006c;
+		padding: 10px;
+		font-size: 20px;
+		color:#fff;
+		cursor: pointer;
+		text-align: center;
+	}
+
+	.tab_label:hover{
+	background-color: #0704b6;
+	transition: 0.2s ease-in-out;
+	}
+
+	.nav_tabs .rd_tab { 
+	display:none;
+	position: absolute;
+	}
+
+.nav_tabs .rd_tab:checked ~ label { 
+	background-color: orange;
+	color:#fff;
+}
+
+
+.tab-content{
+	background-color: #ffffff;
+	display: none;
+	position: absolute!important;
+	height: 320px;
+	left: 10%;
+	
+}
+
+.aovivo{
+margin-top: 3%;
+margin-bottom: 2%;
+}
+.aovivo p{
+	padding: 15px;
+}
+
+.rd_tab:checked ~ .tab-content{
+	display: block;
+	margin-top: 5%;
+	height: auto;
+}
+.tab-content h2{
+	padding: 10px;
+	color: #1200b3;
+}
+.tab-content article{
+	padding: 10px;
+	color: black;
+}
+
+
+iframe {
+ float: left;
+ top: 0;
+ left: 0;
+ width: 890px;
+ height: 500px;
+}
+
+p,h1{
+	text-align: center;
+}
+
+footer{
+    margin: 0;
+	padding: 0;
+    display:flex;
+    justify-content: space-around;
+    background-color: #4c5dcc;
+    width: 100%;
+	height: 10%;
+	position:absolute;
+	top: 900px !important;
+	align-items: center;
+	margin-top: 100px;
+}
+footer p{
+	font-size: 15px;
+	text-align: left;
+    color: #fff;
+   font-family: Arial, Helvetica, sans-serif;
+}
+footer h1{
+	font-size: 23px;
+    color: #fff;
+}
+header{
+	height: 80px;
+}
+
+.header{
+	justify-content: space-evenly;
+	display: flex;
+	width: 100%;
+	background-color: #ffffff;
+	align-items: center;
+	position: fixed;
+	z-index: 9;
+}
+a img{
+    width: 300px;
+    height: 80px;
+}
+
+#voltar {
+	width: 70px;
+	text-decoration: none;
+	color: #fff;
+	border: 2px solid orange;
+	background-color: orange;
+	padding: 13px;
+	border-radius: 5%;
+	text-align: center;
+}
+header a{
+font-size: 17px;
+
+}
+#voltar:hover{
+	border: 2px solid red;
+	background-color: red;
+}
+
+
+@media only screen and ( max-width: 1044px ) {
+
+
+	.nav_tabs{
+		width:100%;
+		text-align: center;
+		margin:0 auto;
+		background-color: #fff;
+	}
+
+	.nav_tabs ul{
+		margin-left: 8% !important;
+		list-style: none;
+		text-align: center;
+	}
+	
+
+	.nav_tabs ul li{
+		float: left;
+	}
+
+	.tab_label{
+		display: flex;
+		flex-direction: column;
+		background-color: #05006c;
+		padding: 12px;
+		font-size: 12px;
+		color:#fff;
+		cursor: pointer;
+		text-align: center;
+		border: 2px solid #fff;
+	}
+
+
+	.nav_tabs .rd_tab { 
+	display:none;
+	position: absolute;
+
+	}	
+
+.nav_tabs .rd_tab:checked ~ label { 
+	background-color: orange;
+	color:#fff;
+	margin:0;
+}
+
+.tab-content{
+	border-top: none;
+    background-color: #ffffff;
+    display: none;
+    height: 50%;
+    width: 100%;
+    top: 45%;
+    left: 0;	
+}
+
+.rd_tab:checked ~ .tab-content{
+	display: block;
+	margin-top: 10%;
+}
+.tab-content h2{
+	color: orange;
+}
+.tab-content article{
+	padding: 1px;
+	color: black;
+}
+
+iframe {
+float: none;
+ top: 0;
+ left: 0;
+ width: 400px;
+ height: 225px;
+}
+footer{
+   margin: 0;
+    display:flex;
+    justify-content: space-evenly;
+    background-color: #05006c;
+    width: 100%;
+	height: 60px;
+	position:absolute;
+	top:835px !important;
+	align-items: center;
+}
+footer p{
+	margin-left: 7px;
+	text-align: left;
+    color: #fff;
+    font-size: 12px;
+}
+footer h1{
+	font-size: 12px;
+    color: #fff;
+}
+
+
+header{
+	height: 80px;
+}
+
+.header{	
+	width: 100%;
+	height: 80px;
+	background-color: #ffffff;	
+	position: fixed;
+	z-index: 9;
+}
+
+.header strong{
+	display: none;
+}
+
+
+.header a img{
+    width: 160px;
+    height: 50px;
+	float: left;
+}
+
+#voltar {
+	text-decoration: none;
+	color: #fff;
+	border: 2px solid orange;
+	background-color: orange;
+	padding: 8px;
+	border-radius: 5%;
+	font-size: 12px;
+}
+/*iframe {
+	float: none;
+	 top: 0;
+	 left: 0;
+	 width: 400px;
+	 height: 225px;
+	}*/
+
+}
+
+
+@media only screen and ( max-width: 700px ) {
+
+
+.nav_tabs{
+	width:100%;
+	text-align: center;
+	margin:0 auto;
+	background-color: #fff;
+}
+
+.nav_tabs ul{
+	margin-left: 8% !important;
+	list-style: none;
+	text-align: center;
+	margin-top: 10%;
+}
+
+
+.nav_tabs ul li{
+	float: left;
+}
+
+.tab_label{
+	display: flex;
+	flex-direction: column;
+	background-color: #05006c;
+	padding: 15px;
+	font-size: 12px;
+	color:#fff;
+	cursor: pointer;
+	text-align: center;
+	border: 2px solid #fff;
+}
+
+
+.nav_tabs .rd_tab { 
+display:none;
+position: absolute;
+
+}	
+
+.nav_tabs .rd_tab:checked ~ label { 
+background-color: orange;
+color:#fff;
+margin:0;
+}
+
+.tab-content{
+border-top: none;
+background-color: #ffffff;
+display: none;
+height: 50%;
+width: 100%;
+top: 45%;
+left: 0;	
+}
+
+.rd_tab:checked ~ .tab-content{
+display: block;
+margin-top: 2%;
+}
+.tab-content h2{
+color: orange;
+}
+.tab-content article{
+padding: 1px;
+color: black;
+}
+
+iframe {
+float: none;
+top: 0;
+left: 0;
+width: 375px;
+height: 210px;
+}
+footer{
+margin: 0;
+display:flex;
+justify-content: space-evenly;
+background-color: #05006c;
+width: 100%;
+height: 60px;
+position:absolute;
+top:835px !important;
+align-items: center;
+}
+footer p{
+margin-left: 7px;
+text-align: left;
+color: #fff;
+font-size: 12px;
+}
+footer h1{
+font-size: 12px;
+color: #fff;
+}
+
+
+header{
+height: 80px;
+}
+
+.header{	
+width: 100%;
+height: 80px;
+background-color: #ffffff;	
+position: fixed;
+z-index: 9;
+}
+
+.header strong{
+display: none;
+}
+
+
+.header a img{
+width: 160px;
+height: 50px;
+float: left;
+}
+
+#voltar {
+text-decoration: none;
+color: #fff;
+border: 2px solid orange;
+background-color: orange;
+padding: 8px;
+border-radius: 5%;
+font-size: 12px;
+}
+}
+
+</style>
+<body>
+	<header>
+		<div class="header">
+			<a id="logo"href="https://www.manhuacu.mg.gov.br/"><img src="https://www.manhuacu.mg.gov.br/css/images/logotipo.png"></a>
+			<h1><strong style="color: #020069;"> Trabalhalhar para bem Servir!</strong></h1>
+			<a id="voltar" href="https://www.manhuacu.mg.gov.br/" target="_self">Voltar</a>
+		</div>
+		
+	</header>
+	<div class="aovivo">
+		<h1>Monitoramento <span style="color: red;">AO VIVO</span> do nível do rio MANHUAÇU</h1>
+        
+<h4 style="text-align: center; color: red; font-weight: 800; font-size: 17px;" >Selecione a camera no menu para visualizar</h4>
+	</div>
+
+	<nav class="nav_tabs">
+		<ul>
+			<li>
+				<input type="radio" id="tab1" class="rd_tab" name="tabs" checked>
+				<label for="tab1" class="tab_label">Ponte Do Silva 1</label>
+				<div class="tab-content">
+					<h2>Camera Ponte do Silva - Camera Rio</h2>
+					<article>
+						Imagens em Tempo Real da Ponte do Silva - Camera Rio
+					</article>
+					<iframe width="1063" height="598" src="https://rtsp.me/embed/QbG2RB5h/" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+				</div>
+			</li>
+			<li>
+				<input type="radio" name="tabs" class="rd_tab" id="tab2">
+				<label for="tab2" class="tab_label">Ponte Do Silva 2</label>
+				<div class="tab-content">
+					<h2>Camera Ponte do Silva - Camera Régua</h2>
+					<article>
+						Imagens em Tempo Real da Ponte do Silva - Camera Régua
+					</article>
+					<iframe width="1063" height="598" src="https://rtsp.me/embed/5stBS3Ft/" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+				</div>
+			</li>
+			<li>
+				<input type="radio" name="tabs" class="rd_tab" id="tab3">
+				<label for="tab3" class="tab_label">Ponte Dos Arcos 1</label>
+				<div class="tab-content">
+					<h2>Ponte Dos Arcos - Camera Rio</h2>
+					<article>
+						Imagens em Andamento
+					</article>
+					<iframe width="1063" height="598" src="" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+				</div>
+			</li>
+			<li>
+				<input type="radio" name="tabs" class="rd_tab" id="tab4">
+				<label for="tab4" class="tab_label">Ponte Dos Arcos 2</label>
+				<div class="tab-content">
+					<h2>Ponte Dos Arcos - Camera Régua</h2>
+					<article>
+						Imagens em Andamento
+					</article>
+					<iframe width="1063" height="598" src="" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+				</div>
+
+				<li>
+					<input type="radio" name="tabs" class="rd_tab" id="tab5">
+					<label for="tab5" class="tab_label">Ponte Casa Leitão 1</label>
+					<div class="tab-content">
+						<h2>Ponte Casa Leitão - Camera Rio</h2>
+						<article>
+							Imagens em Andamento
+						</article>
+						<iframe width="1063" height="598" src="" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+					</div>
+				</li>
+
+				<li>
+					<input type="radio" name="tabs" class="rd_tab" id="tab6">
+					<label for="tab6" class="tab_label">Ponte Casa Leitão 2</label>
+					<div class="tab-content">
+						<h2>Ponte Casa Leitão - Camera Régua</h2>
+						<article>
+							Imagens em Andamento
+						</article>
+						<iframe width="1063" height="598" src="" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+					</div>
+				</li>
+			</li>
+		</ul>
+	</nav>
+</div>
+<footer>
+    <p></br>Prefeitura de Manhuaçu (MG), Praça 05 de Novembro, 381, centro, CEP 36.900-091</br>
+        Telefone: (33) 3339-2700</p>
+    </br></br>
+    <h1> &copy Desenvolvido pela Secretaria de Informática.
+    
+    </h1>
+</footer>
+</body>
+</html>
+
+<!--
+	By Herick
+-->
